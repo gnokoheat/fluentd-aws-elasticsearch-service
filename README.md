@@ -1,4 +1,6 @@
 # fluentd-aws-elasticsearch-service
+![GitHub](https://img.shields.io/github/license/gnokoheat/fluentd-aws-elasticsearch-service) ![Docker Pulls](https://img.shields.io/docker/pulls/gnokoheat/fluentd-aws-es) ![GitHub repo size](https://img.shields.io/github/repo-size/gnokoheat/fluentd-aws-elasticsearch-service) ![GitHub last commit](https://img.shields.io/github/last-commit/gnokoheat/fluentd-aws-elasticsearch-service)
+
 Fluentd container for AWS Elasticsearch Service
 
 ## Environment variables
