@@ -1,7 +1,9 @@
 # fluentd-aws-elasticsearch-service
 ![GitHub](https://img.shields.io/github/license/gnokoheat/fluentd-aws-elasticsearch-service) ![Docker Pulls](https://img.shields.io/docker/pulls/gnokoheat/fluentd-aws-es) ![GitHub repo size](https://img.shields.io/github/repo-size/gnokoheat/fluentd-aws-elasticsearch-service) ![GitHub last commit](https://img.shields.io/github/last-commit/gnokoheat/fluentd-aws-elasticsearch-service)
 
-Fluentd container for AWS Elasticsearch Service
+Fluentd aggregation container for AWS Elasticsearch Service
+
+![](fluentd-es.png)
 
 ## Environment variables
 ```
@@ -13,9 +15,15 @@ Fluentd container for AWS Elasticsearch Service
 - PREFIX : elasticsearch service logstash prefix (option, default : logstash)
 ```
 
-## Docker Run
+## Usage
 
-1. Default
+- Setting of Fluentd log driver (Docker log sender)
+```
+docker run --log-driver=fluentd --log-opt fluentd-address=fluentdhost:24224 ...
+```
+- Docker Run of Fluentd aggregation container (Docker log aggregator and input to ES)
+
+1. Default setting
 ``` bash
 docker run -d -p 24224:24224 --name fluentd-aws-es \
     -e ES_URL=https://vpc-es-xxxxxxxxxxxx.us-east-1.es.amazonaws.com \
@@ -25,7 +33,7 @@ docker run -d -p 24224:24224 --name fluentd-aws-es \
     gnokoheat/fluentd-aws-es
 ```
 
-2. Port change
+2. Port change setting
 ``` bash
 docker run -d -p 30000:30000 --name fluentd-aws-es \
     -e ES_URL=https://vpc-es-xxxxxxxxxxxx.us-east-1.es.amazonaws.com \
