@@ -3,7 +3,7 @@
 
 Fluentd aggregation container for AWS Elasticsearch Service
 
-![](https://github.com/gnokoheat/fluentd-aws-elasticsearch-service/blob/master/fluentd-es.png)
+![](https://github.com/gnokoheat/fluentd-aws-elasticsearch-service/blob/master/fluentd-es.png?raw=true)
 
 ## Environment variables
 ```
